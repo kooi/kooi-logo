@@ -1,0 +1,31 @@
+import turtle
+tina = turtle.Turtle()
+tina.shape("turtle")
+tina.speed(0)
+
+def wedge(a):
+    tina.left(30)
+    tina.forward(50)
+    tina.backward(50)
+    tina.left(a)
+    tina.forward(100)
+    tina.backward(100)
+    tina.right(30+a)
+
+for i in range(8):
+    tina.penup()
+    tina.forward(80)
+    tina.pendown()
+    wedge(360./8)
+    tina.penup()
+    tina.backward(50)
+    tina.left(360./8)
+    tina.pendown()
+tina.penup()
+tina.forward(15)
+tina.right(90)
+tina.forward(80)
+tina.left(90)
+tina.pendown()
+tina.circle(120)
+tina.hideturtle()
